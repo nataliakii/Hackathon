@@ -1,0 +1,75 @@
+body {
+  background: #d7dbdd;
+  color: white;
+}
+
+.cont {
+  background-color: #154360;
+  padding: 2%;
+}
+.age-result {
+  border-radius: 4px 0 0 4px;
+  border-left: white solid 1px;
+  border-bottom: white solid 1px;
+  border-top: white solid 1px;
+}
+.img-result {
+  border-radius: 0 4px 4px 0;
+  border-right: white solid 1px;
+  border-bottom: white solid 1px;
+  border-top: white solid 1px;
+}
+.result {
+  margin-left: 35px;
+}
+img {
+  border: 2px solid;
+  margin-left: -15px;
+  border-radius: 4px;
+  margin-left: 33px;
+}
+.age {
+  color: #154360;
+  margin-bottom: 30px;
+  margin-left: -4px;
+}
+.input-group {
+  margin-left: 24px;
+  margin-top: 30px;
+  border-radius: 4px !important;
+}
+button {
+  border-radius: 0 4px 4px 0 !important;
+}
+button[type="button"]:hover {
+  background: #154360 !important;
+}
+.art-text {
+  margin: 10px;
+}
+
+img {
+  width: 290px;
+  align-content: center;
+}
+.age {
+  text-align: left;
+}
+.container-image {
+  float: right;
+  /* background: #512e5f; */
+  color: white;
+  border-left: white solid 34px;
+  background-image: url("https://w0.peakpx.com/wallpaper/333/286/HD-wallpaper-steins-gate-clocks-clock-time-control-time-travel.jpg");
+  display: block;
+  position: fixed;
+  left: 78.5%;
+  top: 0%;
+  bottom: 0%;
+  right: 0%;
+  width: 50%;
+  height: 100%;
+  opacity: 0.7;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
