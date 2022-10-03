@@ -2,6 +2,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Skeleton } from '@mui/material';
 import { fetchArtwork } from '../actions';
 
 export default function Result() {
@@ -15,7 +16,7 @@ export default function Result() {
 
   const artRender = () => {
     if (!artwork.title) {
-      return <div>Loading</div>;
+      return <Skeleton variant="circular" width={210} height={210} />;
     }
     return (
       <>
