@@ -1,28 +1,21 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
-import { fetchDog, fetchArtwork } from '../actions';
-import Artwork from './artwork';
-import Dog from './dog';
+
+import { useSelector } from 'react-redux';
 
 export default function Age() {
   const age = useSelector((state) => state.age);
-  const dispatch = useDispatch();
 
-  if (age > 45) {
-    dispatch(fetchDog());
-  } else {
-    dispatch(fetchArtwork());
-  }
+  if (age === -1) return null;
+  if (!age)
+    return (
+      <div style={{ marginLeft: '23px' }}>
+        We don't have this name, please try another one
+      </div>
+    );
 
   return (
     <div className="result">
       <h5 className="age">Your age is {age}...</h5>
-      <Switch>
-        <Dog />
-        <Artwork />
-      </Switch>
     </div>
   );
 }

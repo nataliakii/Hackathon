@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import { applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
@@ -16,10 +15,13 @@ const createStoreWithMiddleware = applyMiddleware(promise)(configureStore);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Provider store={createStoreWithMiddleware({ reducer: reducers })}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
+    <Provider
+      store={createStoreWithMiddleware({
+        reducer: reducers,
+        middleware: (getDefaultMiddleware) => getDefaultMiddleware(),
+      })}
+    >
+      <App />
     </Provider>
   </React.StrictMode>
 );

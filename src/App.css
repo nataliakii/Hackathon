@@ -10,13 +10,10 @@ body {
 .age-result {
   border-radius: 4px 0 0 4px;
   border-left: white solid 1px;
-  border-bottom: white solid 1px;
   border-top: white solid 1px;
 }
 .img-result {
   border-radius: 0 4px 4px 0;
-  border-right: white solid 1px;
-  border-bottom: white solid 1px;
   border-top: white solid 1px;
 }
 .result {
@@ -26,7 +23,7 @@ img {
   border: 2px solid;
   margin-left: -15px;
   border-radius: 4px;
-  margin-left: 33px;
+  margin-left: 30px;
 }
 .age {
   color: #154360;
@@ -70,6 +67,6 @@ img {
   width: 50%;
   height: 100%;
   opacity: 0.7;
-  background-size: contain;
-  background-repeat: no-repeat;
+  background-size: cover;
+  background-repeat: repeat-y;
 }

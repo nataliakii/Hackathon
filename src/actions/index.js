@@ -1,13 +1,13 @@
 import axios from 'axios';
 import _ from 'lodash';
 
-export async function fetchData(input) {
+export async function fetchAge(input) {
   const rootNameURL = 'https://api.agify.io?name=';
 
   const request = await axios.get(`${rootNameURL}${input}`);
 
   return {
-    type: 'FETCH_DATA',
+    type: 'FETCH_AGE',
     payload: request,
   };
 }
@@ -50,7 +50,6 @@ export async function fetchArtwork() {
   const artworkData = transformData(request);
   artworkData.imageURL = `https://www.artic.edu/iiif/2/${artworkData.imageId}/full/843,/0/default.jpg`;
 
-  console.log(artworkData);
   return {
     type: 'FETCH_ARTWORK',
     payload: artworkData,
